@@ -36,6 +36,11 @@ resource "aws_s3_bucket" "root_bucket" {
             }
         }
     }
+
+
+    website {
+      redirect_all_requests_to = aws_s3_bucket.prefixed_bucket.website_domain
+    }
 }
 
 resource "aws_s3_bucket" "prefixed_bucket" {
@@ -59,6 +64,14 @@ resource "aws_s3_bucket" "prefixed_bucket" {
     website {
       index_document = "index.html"
     }
+}
+
+resource "aws_s3_bucket_public_access_block" "root_bucket_public_access" {
+    bucket = aws_s3_bucket.root_bucket.id
+    block_public_acls = true
+    block_public_policy = true
+    ignore_public_acls = true
+    restrict_public_buckets = true
 }
 
 resource "aws_dynamodb_table" "service_state_lock" {
