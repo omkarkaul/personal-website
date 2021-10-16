@@ -52,6 +52,13 @@ resource "aws_s3_bucket" "prefixed_bucket" {
             }
         }
     }
+
+    acl = "public-read"
+    policy = file("prefixed_bucket_policy.json")
+
+    website {
+      index_document = "index.html"
+    }
 }
 
 resource "aws_dynamodb_table" "service_state_lock" {
