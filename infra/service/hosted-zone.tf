@@ -26,3 +26,19 @@ resource "aws_route53_record" "root_to_prefix_record" {
     evaluate_target_health = false
   }
 }
+
+resource "aws_route53_record" "website_cert_record" {
+  name    = local.cert_dvo.0.resource_record_name
+  type    = local.cert_dvo.0.resource_record_type
+  zone_id = aws_route53_zone.website.zone_id
+  records = [local.cert_dvo.0.resource_record_value]
+  ttl     = "60"
+}
+
+resource "aws_route53_record" "website_cert_record2" {
+  name    = local.cert_dvo.1.resource_record_name
+  type    = local.cert_dvo.1.resource_record_type
+  zone_id = aws_route53_zone.website.zone_id
+  records = [local.cert_dvo.1.resource_record_value]
+  ttl     = "60"
+}
