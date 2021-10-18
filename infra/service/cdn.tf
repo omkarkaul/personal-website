@@ -7,7 +7,7 @@ resource "aws_cloudfront_distribution" "prefixed_distribution" {
         custom_origin_config {
             http_port              = "80"
             https_port             = "443"
-            origin_protocol_policy = "http-only"
+            origin_protocol_policy = "https-only" # prefixed distro origin policy must be https
             origin_ssl_protocols   = ["TLSv1"]
         }
     }
@@ -58,7 +58,7 @@ resource "aws_cloudfront_distribution" "root_distribution" {
         custom_origin_config {
             http_port              = "80"
             https_port             = "443"
-            origin_protocol_policy = "http-only"
+            origin_protocol_policy = "http-only" # root distro origin policy must be http in order to redirect to https
             origin_ssl_protocols   = ["TLSv1"]
         }
     }
