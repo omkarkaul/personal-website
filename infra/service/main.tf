@@ -37,9 +37,8 @@ resource "aws_s3_bucket" "root_bucket" {
         }
     }
 
-
     website {
-      redirect_all_requests_to = aws_s3_bucket.prefixed_bucket.website_domain
+      redirect_all_requests_to = "https://${aws_s3_bucket.prefixed_bucket.bucket}"
     }
 }
 
