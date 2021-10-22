@@ -1,6 +1,6 @@
 resource "aws_route53_zone" "website" {
-    name = lookup(var.website_bucket, "root")
-    comment = "via Terraform"
+  name    = lookup(var.website_bucket, "root")
+  comment = "via Terraform"
 }
 
 resource "aws_route53_record" "main_record" {

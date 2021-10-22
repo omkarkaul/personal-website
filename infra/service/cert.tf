@@ -3,18 +3,18 @@
 # https://www.terraform.io/docs/configuration/providers.html#multiple-provider-instances
 
 provider "aws" {
-  alias      = "acm_provider"
-  region     = "us-east-1"
+  alias  = "acm_provider"
+  region = "us-east-1"
 }
 
 resource "aws_acm_certificate" "website_cert" {
-  provider          = aws.acm_provider
-  domain_name       = "www.rakmo.io"
-  validation_method = "DNS"
+  provider                  = aws.acm_provider
+  domain_name               = "www.rakmo.io"
+  validation_method         = "DNS"
   subject_alternative_names = ["rakmo.io"]
 
   lifecycle {
-      create_before_destroy = true
+    create_before_destroy = true
   }
 }
 
