@@ -29,7 +29,7 @@ function App() {
         </div>
 
         <div className="main">
-          THIS IS A TEST!!
+          {generateFaqBlob("what is this?", "THIS IS A TEST!!")}
         </div>
       </div>
     </div>
