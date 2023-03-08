@@ -23,7 +23,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  margin-top: 2vh;
+  margin-top: 10vh;
 }
 
 .title {
@@ -75,6 +75,10 @@ body {
 @media (max-width: 600px) {
   body {
     font-size: 12px;
+  }
+
+  .main {
+    margin-top: 5vh;
   }
 
   .githubImage {
