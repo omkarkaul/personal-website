@@ -1,0 +1,26 @@
+[
+  {
+    "question": "what's your name?",
+    "answer": "omkar kaul"
+  },
+  {
+    "question": "what did you study?",
+    "answer": "i studied computer science & economics at the university of auckland"
+  },
+  {
+    "question": "what do you do?",
+    "answer": "i'm a devops engineer at block, specifically i work on merchant transactions services for the afterpay business unit"
+  },
+  {
+    "question": "what did you used to do?",
+    "answer": "i used to be a site reliability engineer at xero, before that i did some software internships in the iot and blockchain spaces"
+  },
+  {
+    "question": "what type of software engineering do you like?",
+    "answer": "i do have a penchant for backend & infrastructure type work and i'm much more well versed in that than frontend or website building, but more than anything i enjoy building good products, solving problems, and having fun"
+  },
+  {
+    "question": "what's the deal with the website name?",
+    "answer": "the website name and domain spelled backwards is what my friends usually say to get my attention"
+  }
+]
