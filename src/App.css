@@ -3,13 +3,12 @@
   padding:0;
 }
 
-.App {
+body {
+  font-size: 18px;
   background-color: #D6D6D6;
 }
 
 .contentContainer {
-  /* background-color: pink; */
-  height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -19,31 +18,16 @@
   justify-content: space-between;
 }
 
-.linkContainer {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 12rem
-}
-
-.subtitleContainer {
-}
-
 .main {
   display: flex;
   flex-direction: column;
-  flex-grow: 100;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 2vh;
 }
 
 .title {
   font-size: 80px
-}
-
-.subtitle {
-  font-weight: normal;
-  font-size: small;
-  padding: 0 0 0 0.3rem;
-  border-bottom: 1px dashed black;
 }
 
 .mainTitle {
@@ -51,16 +35,55 @@
   text-decoration: underline;
 }
 
-.faqBody {
-  padding: 0.3rem 0 1rem 0.3rem;
+.linkContainer {
+  text-align: center;
+  padding-top: 10vh;
+}
+
+.linkContainerTitle {
+  padding-bottom: 1vh;
 }
 
 .link {
-  color: black;
-  cursor: pointer;
+  padding: 2px;
 }
 
-.link:hover {
-  color: grey;
-  cursor: pointer;
+
+.githubImage {
+  height: 5vh;
+}
+.linkedinImage {
+  height: 5vh;
+}
+
+@media (max-width: 1000px) {
+  body {
+    font-size: 16px;
+  }
+
+  .githubImage {
+    width: 50px;
+    height: 50px;
+  }
+
+  .linkedinImage {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 12px;
+  }
+
+  .githubImage {
+    width: 25px;
+    height: 25px;
+  }
+
+  .linkedinImage {
+    width: 25px;
+    height: 25px;
+  }
 }
