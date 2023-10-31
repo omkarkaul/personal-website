@@ -1,5 +1,5 @@
 body {
-    font-family: sans-serif;
+    font-family: Roboto, sans-serif;
     font-size: 1rem;
     max-width: 42rem;
     padding: 1rem;
@@ -68,4 +68,35 @@ ul.flat {
 pre {
   white-space: pre-wrap;
   word-wrap: break-word;
+}
+
+.qna {
+    margin-left: 1rem;
+}
+
+.qnaQuestionContainer, .qnaAnswerContainer {
+    margin-left: 1rem;
+    display: flex;
+}
+
+.qnaQuestion, .qnaAnswer {
+    margin-right: 0.5rem;
+}
+
+p {
+    font-family: monospace;
+    margin: 0;
+}
+
+.loading {
+  display:inline-block;
+  font-family: monospace;
+  clip-path: inset(0 3ch 0 0);
+  animation: l 1s steps(4) infinite;
+}
+
+@keyframes l {
+  to {
+    clip-path: inset(0 -1ch 0 0)
+  }
 }
