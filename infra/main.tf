@@ -42,6 +42,7 @@ resource "aws_s3_bucket_cors_configuration" "example" {
     allowed_methods = ["HEAD", "GET"]
     allowed_origins = [
       "https://www.rakmo.io",
+      "https://rakmo.io",
       "http://localhost:3000",
       "https://*rakmo.netlify.app"
     ]
