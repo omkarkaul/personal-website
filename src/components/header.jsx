@@ -15,9 +15,9 @@ function Header({currentPath, handleSetPath}) {
                             svgPath={CONSTANTS.GITHUB_ICON_SVG_PATH}
                         />
                         <Icon
-                            href="https://twitter.com/nzomkar"
-                            title="Twitter"
-                            svgPath={CONSTANTS.TWITTER_ICON_SVG_PATH}
+                            href="https://linkedin.com/in/omkar-kaul"
+                            title="LinkedIn"
+                            svgPath={CONSTANTS.LINKEDIN_ICON_SVG_PATH}
                         />
                     </ul>
                 </nav>
