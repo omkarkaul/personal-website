@@ -1,8 +1,13 @@
 import Header from "./header";
 import Home from "../pages/home/home";
 import About from "../pages/about/about";
+import {useEffect, useState} from "react";
 
-function Router({ path, setPath }) {
+import '../App.css';
+
+function Router() {
+    const [path, setPath] = useState(window.location.pathname);
+
     function renderBody() {
         if (path === "/") {
             return <Home/>;
@@ -18,6 +23,18 @@ function Router({ path, setPath }) {
         window.history.pushState({}, "", path)
         setPath(path);
     }
+
+    useEffect(() => {
+        const onLocationChange = () => {
+            setPath(window.location.pathname);
+        }
+
+        window.addEventListener('popstate', onLocationChange);
+
+        return () => {
+            window.removeEventListener('popstate', onLocationChange)
+        };
+    }, [])
 
     return (
         <>
