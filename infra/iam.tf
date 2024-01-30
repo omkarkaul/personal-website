@@ -24,3 +24,21 @@ data "aws_iam_policy_document" "qna_bucket_get_objects" {
     resources = [aws_s3_bucket.qna_bucket.arn]
   }
 }
+
+resource "aws_iam_role" "posts_lambda_role" {
+  name               = "posts_lambda_role"
+  assume_role_policy = data.aws_iam_policy_document.posts_lambda_policy_document.json
+}
+
+data "aws_iam_policy_document" "posts_lambda_policy_document" {
+  statement {
+    effect = "Allow"
+
+    principals {
+      type        = "Service"
+      identifiers = ["lambda.amazonaws.com"]
+    }
+
+    actions = ["sts:AssumeRole"]
+  }
+}
